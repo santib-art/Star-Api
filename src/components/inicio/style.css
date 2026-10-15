@@ -1,0 +1,53 @@
+.hangar {
+    width: min(1120px, calc(100% - 40px));
+    min-height: calc(100vh - 70px);
+    margin: 0 auto;
+    padding: 62px 0 120px;
+    color: #edf3f4;
+}
+
+.hangar-encabezado { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; padding-bottom: 36px; border-bottom: 1px solid #33464b; }
+.hangar-etiqueta { color: #d4b45c; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em; }
+.hangar-encabezado h1 { margin: 12px 0 8px; font-size: clamp(2.7rem, 7vw, 5.5rem); line-height: 0.95; }
+.hangar-intro { max-width: 550px; color: #9eb5b8; font-size: 1rem; }
+.hangar-total { display: grid; margin: 0 0 4px; text-align: right; }
+.hangar-total strong { color: #f4d778; font-size: 2.4rem; font-weight: 500; line-height: 1; }
+.hangar-total span { margin-top: 7px; color: #9eb5b8; font-size: 0.78rem; }
+.hangar-controles { display: flex; gap: 14px; padding: 22px 0; }
+.hangar-categorias { display: flex; width: max-content; max-width: 100%; gap: 4px; margin-top: 20px; padding: 4px; border: 1px solid #33464b; background: #111c20; }
+.hangar-categorias button { padding: 9px 15px; border: 0; border-radius: 2px; background: transparent; color: #9eb5b8; font-size: 0.82rem; cursor: pointer; }
+.hangar-categorias button:hover, .hangar-categorias button.activa { background: #d4b45c; color: #10191c; }
+.hangar-controles label { display: grid; gap: 7px; color: #9eb5b8; font-size: 0.72rem; }
+.hangar-busqueda { flex: 1; }
+.hangar-controles input, .hangar-controles select { min-height: 42px; padding: 0 12px; border: 1px solid #33464b; border-radius: 3px; background: #111c20; color: #edf3f4; font: inherit; }
+.hangar-controles input:focus, .hangar-controles select:focus { outline: 2px solid #54a7a0; outline-offset: 1px; }
+.hangar-filtro select { min-width: 180px; }
+.hangar-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.hangar-nave { position: relative; min-width: 0; min-height: 220px; padding: 16px; overflow: hidden; border: 1px solid #33464b; border-radius: 3px; background: linear-gradient(145deg, #172529, #10191c 74%); color: inherit; text-align: left; cursor: pointer; transition: border-color 160ms ease, transform 160ms ease; }
+.hangar-nave:hover { transform: translateY(-3px); border-color: #d4b45c; }
+.hangar-nave-numero { position: relative; z-index: 2; color: #849b9f; font-size: 0.65rem; letter-spacing: 0.12em; }
+.hangar-mini-nave { position: relative; display: grid; height: 80px; margin: 8px 0 4px; place-items: center; }
+.hangar-mini-nave::before { width: 45%; height: 20%; background: linear-gradient(90deg, #849597, #e3e1cf, #758789); clip-path: polygon(0 50%, 18% 10%, 82% 10%, 100% 50%, 82% 90%, 18% 90%); content: ''; filter: drop-shadow(0 0 10px #54a7a06b); }
+.hangar-mini-nave::after { position: absolute; width: 38%; height: 6%; background: #89999a; transform: rotate(-16deg); content: ''; }
+.hangar-mini-nave i { position: absolute; z-index: 1; width: 8%; height: 8%; border-radius: 50%; background: #f1c568; box-shadow: 0 0 14px #f1c568; }
+.hangar-mini-personaje { display: grid; width: 58px; height: 58px; margin: 18px auto; place-items: center; border: 1px solid #d4b45c; border-radius: 50%; background: radial-gradient(circle at 38% 30%, #d7bf83, #657b79 60%, #243439); color: #10191c; font-family: 'Barlow Condensed', sans-serif; font-size: 2rem; }
+.hangar-mini-planeta { display: block; width: 65px; height: 65px; margin: 14px auto; border-radius: 50%; background: repeating-linear-gradient(160deg, transparent 0 8px, #ffffff22 9px 12px), radial-gradient(circle at 35% 28%, #e2b96b, #9c6848 38%, #30474c 76%); box-shadow: inset -12px -8px 18px #071014a6, 0 0 20px #d4b45c30; }
+.hangar-nave-nombre, .hangar-nave-modelo { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.hangar-nave-nombre { font-size: 1.1rem; font-weight: 600; }
+.hangar-nave-modelo { margin-top: 4px; color: #9eb5b8; font-size: 0.75rem; }
+.hangar-nave-pie { display: flex; justify-content: space-between; gap: 8px; margin-top: 12px; color: #d4b45c; font-size: 0.7rem; text-transform: uppercase; }
+.hangar-nave-pie span { color: #edf3f4; font-size: 1rem; line-height: 0.8; }
+.hangar-mensaje { padding: 30px 0; color: #9eb5b8; }
+.hangar-error { color: #f09a79; }
+@media (max-width: 780px) { .hangar-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 540px) {
+    .hangar { width: calc(100% - 28px); padding-top: 34px; }
+    .hangar-encabezado { align-items: flex-start; flex-direction: column; }
+    .hangar-total { text-align: left; }
+    .hangar-controles { flex-direction: column; }
+    .hangar-categorias { width: 100%; }
+    .hangar-categorias button { flex: 1; padding-inline: 6px; }
+    .hangar-filtro select { width: 100%; }
+    .hangar-grid { grid-template-columns: 1fr; }
+     .hangar-nave { min-height: 195px; }
+    }

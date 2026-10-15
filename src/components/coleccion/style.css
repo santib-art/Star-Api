@@ -1,0 +1,24 @@
+.coleccion { width: min(1120px, calc(100% - 40px)); min-height: calc(100vh - 70px); margin: 0 auto; padding: 62px 0 120px; color: #edf3f4; }
+.coleccion-encabezado { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; padding-bottom: 30px; border-bottom: 1px solid #33464b; }
+.coleccion-titulo { margin: 12px 0 8px; font-size: clamp(2.7rem, 7vw, 5rem); line-height: 0.95; }
+.coleccion-descripcion { color: #9eb5b8; }
+.coleccion-progreso { display: flex; align-items: center; gap: 20px; }
+.coleccion-progreso strong { color: #f4d778; font-size: 1.7rem; font-weight: 500; white-space: nowrap; }
+.coleccion-progreso strong span { color: #849b9f; font-size: 1rem; }
+.coleccion-boton { padding: 11px 15px; border: 1px solid #d4b45c; border-radius: 3px; background: #d4b45c; color: #10191c; font: inherit; font-weight: 700; cursor: pointer; }
+.coleccion-boton:disabled { opacity: 0.45; cursor: not-allowed; }
+.coleccion-aviso { padding: 14px 0 0; color: #54c6b4; }
+.coleccion-album { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; padding-top: 24px; }
+.coleccion-nave { display: grid; min-height: 112px; align-content: space-between; padding: 12px; border: 1px solid #293b40; border-radius: 3px; background: #111c20; color: #667b7f; text-align: left; }
+.coleccion-nave.explorada { border-color: #53666b; color: #edf3f4; cursor: pointer; }
+.coleccion-nave.explorada:hover { border-color: #d4b45c; }
+.coleccion-nave-id { color: #d4b45c; font-size: 0.68rem; }
+.coleccion-nave-nombre { overflow: hidden; font-weight: 600; text-overflow: ellipsis; white-space: nowrap; }
+.coleccion-nave-clase { color: #9eb5b8; font-size: 0.72rem; text-transform: uppercase; }
+@media (max-width: 760px) { .coleccion-album { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 540px) {
+	.coleccion { width: calc(100% - 28px); padding-top: 34px; }
+	.coleccion-encabezado { align-items: flex-start; flex-direction: column; }
+	.coleccion-progreso { width: 100%; justify-content: space-between; }
+	.coleccion-album { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}

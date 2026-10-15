@@ -1,0 +1,40 @@
+.detalle-nave { width: min(1080px, calc(100% - 40px)); min-height: calc(100vh - 70px); margin: 0 auto; padding: 54px 0 120px; color: #edf3f4; }
+.detalle-volver { color: #9eb5b8; text-decoration: none; font-size: 0.9rem; }
+.detalle-volver:hover { color: #f4d778; }
+.detalle-encabezado { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; margin: 42px 0 28px; }
+.detalle-etiqueta { color: #d4b45c; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.14em; }
+.detalle-encabezado h1 { margin: 10px 0 4px; font-size: clamp(2.5rem, 7vw, 5rem); line-height: 0.95; }
+.detalle-modelo, .detalle-estado { color: #9eb5b8; }
+.detalle-favorito { padding: 11px 15px; border: 1px solid #53666b; border-radius: 3px; background: #172328; color: #f4d778; cursor: pointer; }
+.detalle-panel { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr); min-height: 340px; border: 1px solid #33464b; background: #111c20; }
+.nave-ilustracion { position: relative; display: grid; min-height: 340px; place-items: center; overflow: hidden; background-image: radial-gradient(1px 1px at 22% 30%, #f2d36c 98%, transparent), radial-gradient(1px 1px at 70% 20%, #e7f0eb 98%, transparent), radial-gradient(1px 1px at 82% 76%, #e7f0eb 98%, transparent), linear-gradient(140deg, #15272b, #0b1418 72%); background-size: 87px 87px, 127px 127px, 101px 101px, auto; }
+.nave-cuerpo, .nave-ala, .nave-cabina, .nave-motor { position: absolute; display: block; background: linear-gradient(145deg, #d5d7ca, #6f8586 58%, #35484e); filter: drop-shadow(0 0 18px #80c6c34a); }
+.nave-cuerpo { z-index: 2; width: 48%; height: 15%; clip-path: polygon(0 50%, 16% 12%, 83% 10%, 100% 50%, 83% 90%, 16% 88%); }
+.nave-ala { width: 40%; height: 8%; background: linear-gradient(90deg, #46585b, #aeb9b2); }
+.nave-ala-izquierda { transform: translateY(-93px) rotate(-12deg); }
+.nave-ala-derecha { transform: translateY(93px) rotate(12deg); }
+.nave-cabina { z-index: 3; width: 12%; height: 9%; border: 1px solid #d9d7b1; border-radius: 50%; background: #54a7a0; box-shadow: 0 0 22px #66d4c5; }
+.nave-motor { z-index: 1; width: 8%; height: 11%; background: #e7a653; box-shadow: 0 0 24px #ed9848; }
+.nave-motor-izquierdo { transform: translate(-210%, -60%); }
+.nave-motor-derecho { transform: translate(-210%, 60%); }
+.registro-ilustracion-people { background-image: radial-gradient(circle at 50% 40%, #263b40, #10191c 72%); }
+.registro-iniciales { display: grid; width: 150px; height: 150px; place-items: center; border: 1px solid #d4b45c; border-radius: 50%; background: radial-gradient(circle at 35% 28%, #d7bf83, #657b79 58%, #243439); color: #10191c; font-family: 'Barlow Condensed', sans-serif; font-size: 4rem; }
+.registro-planeta { display: block; width: 185px; aspect-ratio: 1; border-radius: 50%; background: repeating-linear-gradient(160deg, transparent 0 12px, #ffffff25 13px 19px), radial-gradient(circle at 34% 27%, #e8c174, #ab7550 38%, #39545a 78%); box-shadow: inset -28px -16px 34px #071014a6, 0 0 38px #d4b45c3d; }
+.detalle-datos { padding: 32px 28px; }
+.detalle-datos dl { margin: 18px 0 0; }
+.detalle-datos dl div { display: flex; justify-content: space-between; gap: 16px; padding: 11px 0; border-bottom: 1px solid #293b40; }
+.detalle-datos dt { color: #9eb5b8; }
+.detalle-datos dd { margin: 0; text-align: right; }
+.detalle-pilotos { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 25px 0; border-bottom: 1px solid #33464b; }
+.detalle-pilotos h2 { margin: 8px 0 0; font-size: 1.6rem; }
+.detalle-pilotos ul { display: flex; flex-wrap: wrap; gap: 10px; padding: 0; list-style: none; }
+.detalle-pilotos li { padding: 9px 12px; border: 1px solid #53666b; color: #e7f0eb; }
+.detalle-sin-piloto { color: #9eb5b8; }
+@media (max-width: 700px) {
+	.detalle-nave { width: calc(100% - 28px); padding-top: 32px; }
+	.detalle-encabezado { align-items: flex-start; flex-direction: column; margin-top: 32px; }
+	.detalle-panel { grid-template-columns: 1fr; }
+	.nave-ilustracion { min-height: 260px; }
+	.detalle-datos { padding: 24px 18px; }
+	.detalle-pilotos { align-items: flex-start; flex-direction: column; }
+}
